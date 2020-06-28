@@ -1,0 +1,3 @@
+# SEMS
+Stu management System
+
