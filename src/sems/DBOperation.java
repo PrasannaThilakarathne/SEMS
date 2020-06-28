@@ -73,9 +73,7 @@ public class DBOperation {
         String query = "(SELECT * FROM student) ";
         pst =(PreparedStatement)con.prepareStatement(query);
         rs =  pst.executeQuery();
-        
-        
-        
+            
         while(rs.next()){
         Student s = new Student();
         s.setRegID(rs.getInt(1));
@@ -90,12 +88,9 @@ public class DBOperation {
         s.setYearofreg(rs.getInt(10));
      
         list.add(s);
-        
-       
         }
         return list;
-        
-             
+      
         }catch(SQLException e)
         {
             System.out.println(e);return null;

@@ -29,8 +29,8 @@ public class Navigation extends javax.swing.JFrame {
     void LoadStudent()
     {
         sList = dbops.getStudent();
-        StudentDetails stDetails = new StudentDetails(sList);
-        jTable1.setModel(stDetails);
+         StudentDetails stDetails = new StudentDetails(sList);
+         jTable1.setModel(stDetails);
                 
     }
     

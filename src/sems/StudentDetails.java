@@ -22,41 +22,34 @@ public class StudentDetails extends AbstractTableModel{
     public StudentDetails(ArrayList<Student> sList) {
         list = sList;
     }
-    
-    
-
     @Override
     public int getRowCount() {
         return list.size();
     }
-
     @Override
     public int getColumnCount() {
         return COLUMN_NAMES.length;
     }
-    
     @Override
     public String getColumnName(int columnIndex){
     return COLUMN_NAMES[columnIndex];
     }
-
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch(columnIndex){
-        case 0: return list.get(rowIndex).getRegID();
+        case 0:return list.get(rowIndex).getRegID();
         case 1:return  list.get(rowIndex).getFirstName();
-        case 2 :return list.get(rowIndex).getLastName();
-        case 3 : return list.get(rowIndex).getEmail();
-        case 4: return list.get(rowIndex).getAge();
+        case 2:return list.get(rowIndex).getLastName();
+        case 3:return list.get(rowIndex).getEmail();
+        case 4:return list.get(rowIndex).getAge();
         case 5:return list.get(rowIndex).getAddress();
-        case 6 : return list.get(rowIndex).getGender();
-        case 7: return list.get(rowIndex).getFaculty();
+        case 6:return list.get(rowIndex).getGender();
+        case 7:return list.get(rowIndex).getFaculty();
         case 8:return list.get(rowIndex).getDepartment();
         case 9:return list.get(rowIndex).getYearofreg();
-        default:return "Error";
-            
-                
+        default:return "Error";        
         }
     }
     
 }
+ 
